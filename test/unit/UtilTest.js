@@ -54,6 +54,11 @@ describe ("arrangement",function(){
                 r : 2,
                 arrangement : 20
             },
+            {
+                n : 5,
+                r : 2,
+                arrangement : 30
+            },
         ];
     
     testCase.forEach(function(testCase) {
