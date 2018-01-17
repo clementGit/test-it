@@ -21,6 +21,10 @@ describe ("factorial",function(){
 	                n : 4,
 	                factorial : 24
 	            },
+	            {
+	                n : 5,
+	                factorial : 120
+	            },
 	        ];
 	    
 	    testCase.forEach(function(testCase) {
