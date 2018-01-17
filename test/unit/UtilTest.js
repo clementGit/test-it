@@ -68,3 +68,43 @@ describe ("arrangement",function(){
         });
     });
 });
+describe ("isPrime",function(){
+	
+    var testCase = [
+            {
+                n : 0,
+                isPrime : false
+            },
+            {
+                n : 1,
+                isPrime : true
+            },
+            {
+                n : 2,
+                isPrime : true
+            },
+            {
+                n : 5,
+                isPrime : true
+            },
+            {
+                n : 6,
+                isPrime : false
+            },
+            {
+                n : 10,
+                isPrime : false
+            },
+            {
+                n : 13,
+                isPrime : true
+            },
+        ];
+    
+    testCase.forEach(function(testCase) {
+        it("should returns " + testCase.isPrime + " when n = " + testCase.n, function() {
+            var result = Util.isPrime(testCase.n,testCase.r);
+            expect(result).toEqual(testCase.isPrime);
+        });
+    });
+});
