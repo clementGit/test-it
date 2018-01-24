@@ -68,37 +68,76 @@ describe ("arrangement",function(){
         });
     });
 });
-
 describe ("combination",function(){
 	
     var testCase = [
-            {
-                n : 0,
-                r : 0,
-                combination : 1
-            },
-            {
-                n : 1,
-                r : 1,
-                combination : 1
-            },
-            {
-                n : 2,
-                r : 1,
-                combination : 2
-            },
-            {
-                n : 5,
-                r : 2,
-                combination : 10
-            },
-           
-        ];
+    	{
+    	    n : 0,
+    	    r : 0,
+    	    combination : 1
+    	},
+    	{
+    	    n : 1,
+    	    r : 1,
+    	    combination : 1
+    	},
+    	{
+    	    n : 2,
+    	    r : 1,
+    	    combination : 2
+    	},
+    	{
+    	    n : 5,
+    	    r : 2,
+    	    combination : 10
+    	},
+    ];
     
     testCase.forEach(function(testCase) {
         it("should returns " + testCase.combination + " when n = " + testCase.n + " and r = " + testCase.r, function() {
             var result = Util.combination(testCase.n,testCase.r);
             expect(result).toEqual(testCase.combination);
+        });
+    });
+});
+
+describe ("isPrime",function(){
+	
+    var testCase = [
+            {
+                n : 0,
+                isPrime : false
+            },
+            {
+                n : 1,
+                isPrime : true
+            },
+            {
+                n : 2,
+                isPrime : true
+            },
+            {
+                n : 5,
+                isPrime : true
+            },
+            {
+                n : 6,
+                isPrime : false
+            },
+            {
+                n : 10,
+                isPrime : false
+            },
+            {
+                n : 13,
+                isPrime : true
+            },
+        ];
+    
+    testCase.forEach(function(testCase) {
+        it("should returns " + testCase.isPrime + " when n = " + testCase.n, function() {
+            var result = Util.isPrime(testCase.n,testCase.r);
+            expect(result).toEqual(testCase.isPrime);
         });
     });
 });
