@@ -68,6 +68,39 @@ describe ("arrangement",function(){
         });
     });
 });
+describe ("combination",function(){
+	
+    var testCase = [
+    	{
+    	    n : 0,
+    	    r : 0,
+    	    combination : 1
+    	},
+    	{
+    	    n : 1,
+    	    r : 1,
+    	    combination : 1
+    	},
+    	{
+    	    n : 2,
+    	    r : 1,
+    	    combination : 2
+    	},
+    	{
+    	    n : 5,
+    	    r : 2,
+    	    combination : 10
+    	},
+    ];
+    
+    testCase.forEach(function(testCase) {
+        it("should returns " + testCase.combination + " when n = " + testCase.n + " and r = " + testCase.r, function() {
+            var result = Util.combination(testCase.n,testCase.r);
+            expect(result).toEqual(testCase.combination);
+        });
+    });
+});
+
 describe ("isPrime",function(){
 	
     var testCase = [
